@@ -7,29 +7,19 @@
 // var_dump($data['orang']);
 ?>
 <div class="container">
-  <div class="col">
-    <div class="row">
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Adress</th>
-            <th>Email</th>
-          </tr>
-        </thead>
+  <div class="row">
+    <div class="col-md-8">
+      <ul class="list-group">
         <?php foreach ($data['orang'] as $o) : ?>
 
-          <tbody>
-            <tr>
-              <td><?= $o["id"]; ?></td>
-              <td><?= $o['name']; ?></td>
-              <td><?= $o['address']; ?></td>
-              <td><?= $o['email']; ?></td>
-            </tr>
-          </tbody>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <?= $o['name']; ?>
+            <a href="<?= BASEURL; ?>/orang/detail/<?= $o['id']; ?>" class="badge bg-primary text-decoration-none">detail</a>
+          </li>
+
         <?php endforeach; ?>
-      </table>
+      </ul>
+
     </div>
   </div>
 </div>
