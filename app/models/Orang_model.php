@@ -72,4 +72,19 @@ class Orang_model
     $this->db->bind('id', $id);
     return $this->db->single();
   }
+
+  public function createDataOrang($data)
+  {
+    $query = "INSERT INTO " . $this->table . " VALUES (null, :name, :address, :email)";
+
+    $this->db->query($query);
+
+    $this->db->bind('name', $data['name']);
+    $this->db->bind('address', $data['address']);
+    $this->db->bind('email', $data['email']);
+
+    $this->db->execute();
+
+    return $this->db->rowCount();
+  }
 }
