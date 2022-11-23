@@ -3,6 +3,10 @@ $(function() {
     $(".viewCreateData").on("click", function() {
         $("#formModalLabel").html("Create Data");
         $(".modal-footer button[type=submit]").html("Save Create");
+        $("#name").val("");
+        $("#address").val("");
+        $("#email").val("");
+        $("#id").val("");
     });
     $(".viewModalEdit").on("click", function() {
         // console.log("ok");
