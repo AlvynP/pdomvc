@@ -15,18 +15,30 @@
   <div class="row">
     <div class="col-md-8">
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Create data
+      <button type="button" class="btn btn-primary mb-2 viewCreateData" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Create Data
       </button>
       <ul class="list-group">
+
         <?php foreach ($data['orang'] as $o) : ?>
 
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <?= $o['name']; ?>
-            <a href="<?= BASEURL; ?>/orang/detail/<?= $o['id']; ?>" class="badge bg-primary text-decoration-none">detail</a>
+          <li class="list-group-item">
+            <div class="row ">
+              <div class="col ">
+                <?= $o['name']; ?>
+              </div>
+
+              <div class="col gap-2 text-end">
+                <a href="<?= BASEURL; ?>/orang/detail/<?= $o['id']; ?>" class="badge bg-primary text-decoration-none">detail</a>
+                <a href="<?= BASEURL; ?>/orang/edit/<?= $o['id']; ?>" class="badge bg-warning text-decoration-none viewModalEdit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="<?= $o['id']; ?>">edit</a>
+                <a href="<?= BASEURL; ?>/orang/delete/<?= $o['id']; ?>" class="badge bg-danger text-decoration-none" onclick="return confirm('are you sure?')">delete</a>
+              </div>
+            </div>
           </li>
 
+
         <?php endforeach; ?>
+
       </ul>
 
     </div>
@@ -55,15 +67,16 @@
 </div> -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Create</h1>
+        <h1 class="modal-title fs-5" id="formModalLabel">Create Data</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form action="<?= BASEURL; ?>/orang/create" method="POST">
+          <input type="hidden" name="id" id="id">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" class="form-control" autofocus>
@@ -74,7 +87,7 @@
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" name="email" id="email" class="form-control">
+            <input type="text" name="email" id="email" class="form-control" placeholder="example@example.com">
           </div>
       </div>
       <div class="modal-footer">
