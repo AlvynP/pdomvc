@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= $data['title']; ?></title>
   <link rel="stylesheet" href="<?= BASEURL; ?>/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="<?= BASEURL; ?>/datatable/datatables.css">
 </head>
 
 <body>

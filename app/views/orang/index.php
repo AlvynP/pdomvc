@@ -14,10 +14,30 @@
   </div>
   <div class="row">
     <div class="col-md-8">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary mb-2 viewCreateData" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create Data
+          </button>
+        </div>
+        <div class="col text-end">
+          <form action="<?= BASEURL; ?>/orang/search" method="post">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="search" name="keyword" id="keyword" autocomplete="off">
+              <div class="input-group-append">
+                <button class="btn btn-secondary" type="submit" id="buttonSearch">search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary mb-2 viewCreateData" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Create Data
-      </button>
+
       <ul class="list-group">
 
         <?php foreach ($data['orang'] as $o) : ?>
