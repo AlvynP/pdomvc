@@ -11,18 +11,20 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-      <a href="<?= BASEURL; ?>" class="navbar-brand">AlvynPapalia|</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false" aria-controls="navbarNavAltMarkup" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="<?= BASEURL; ?>">AlvynPapalia|</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a href="<?= BASEURL; ?>" class="nav-item nav-link">Home</a>
-          <a href="<?= BASEURL; ?>/people" class="nav-item nav-link">Json</a>
-          <a href="<?= BASEURL; ?>/orang" class="nav-item nav-link">Database</a>
-          <a href="<?= BASEURL; ?>/about" class="nav-item nav-link">About</a>
+          <a class="nav-link active" aria-current="page" href="<?= BASEURL; ?>">Home</a>
+          <a class="nav-link" href="<?= BASEURL; ?>/people">Json</a>
+          <a class="nav-link" href="<?= BASEURL; ?>/orang">Database</a>
+          <a class="nav-link" href="<?= BASEURL; ?>/about">About</a>
+          <!-- <a class="nav-link disabled">Disabled</a> -->
         </div>
       </div>
     </div>
