@@ -32,3 +32,34 @@ $(function() {
         });
     });
 });
+
+// const nav = document.querySelector(".nav-link");
+// const active = document.querySelector(".active");
+// nav.addEventListener("click", function() {
+//     active.classList.remove(".active");
+// });
+
+// $(".nav-link").on("click", function() {
+//     $(".nav-link").addClass("active");
+//     // $(this).addClass("active");
+// });
+// active.addEventListener(".active");
+
+// nav.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     // ketika tombol submit di klik
+//     active.classList.remove("active");
+//     btnKirim.classList.toggle("none");
+// fetch(scriptURL, {
+//         method: 'POST',
+//         body: new FormData(form)
+//     })
+// .then(response => {
+//     btnLoading.classList.toggle('none');
+//     btnKirim.classList.toggle('none');
+//     myAlert.classList.toggle('none');
+//     form.reset();
+//     console.log('Success!', response);
+// })
+// .catch(error => console.error('Error!', error.message))
+// });

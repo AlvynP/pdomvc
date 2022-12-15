@@ -8,26 +8,28 @@
 <div class="container">
   <div class="col">
     <div class="row">
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Adress</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <?php foreach ($data['people'] as $p) : ?>
-          <tbody>
-            <tr>
-              <td><?= $p["id"]; ?></td>
-              <td><?= $p['name']; ?></td>
-              <td><?= $p['address']; ?></td>
-              <td><?= $p['email']; ?></td>
+      <div class="table-responsive">
+        <table class="table table-hover text-center">
+          <thead>
+            <tr class="bg-secondary">
+              <th>#</th>
+              <th class="">Name</th>
+              <th>Adress</th>
+              <th>Email</th>
             </tr>
-          </tbody>
-        <?php endforeach; ?>
-      </table>
+          </thead>
+          <?php foreach ($data['people'] as $p) : ?>
+            <tbody>
+              <tr>
+                <td><?= $p["id"]; ?></td>
+                <td><?= $p['name']; ?></td>
+                <td><?= $p['address']; ?></td>
+                <td><?= $p['email']; ?></td>
+              </tr>
+            </tbody>
+          <?php endforeach; ?>
+        </table>
+      </div>
     </div>
   </div>
 </div>

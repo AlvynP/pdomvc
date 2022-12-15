@@ -20,10 +20,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="<?= BASEURL; ?>">Home</a>
-          <a class="nav-link" href="<?= BASEURL; ?>/people">Json</a>
-          <a class="nav-link" href="<?= BASEURL; ?>/orang">Database</a>
-          <a class="nav-link" href="<?= BASEURL; ?>/about">About</a>
+          <a class="nav-link <?= ($data['title'] === 'Home') ? 'active' : '' ?>" href="<?= BASEURL; ?>">Home</a>
+          <a class="nav-link <?= ($data['title'] === 'Data People') ? 'active' : '' ?>" href="<?= BASEURL; ?>/people">Json</a>
+          <a class="nav-link <?= ($data['title'] === 'Data Orang') ? 'active' : '' ?>" href="<?= BASEURL; ?>/orang">Database</a>
+          <a class="nav-link <?= ($data['title'] === 'About') ? 'active' : '' ?>" href="<?= BASEURL; ?>/about">About</a>
           <!-- <a class="nav-link disabled">Disabled</a> -->
         </div>
       </div>
